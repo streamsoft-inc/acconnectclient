@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y56-s7-C15">
+                                <rect key="frame" x="0.0" y="476.33333333333326" width="393" height="341.66666666666674"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.8666666666666667" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="oyv-C3-vlb">
+                                <rect key="frame" x="10" y="69" width="373" height="345.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhx-4b-fFQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Load &amp; Play"/>
+                                        <connections>
+                                            <action selector="onLoadAndPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GxF-Sg-tMZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-BL-cVk">
+                                        <rect key="frame" x="0.0" y="53.333333333333329" width="373" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Pause"/>
+                                        <connections>
+                                            <action selector="onPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HCI-zT-9mH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB6-ib-XZW">
+                                        <rect key="frame" x="0.0" y="106.66666666666666" width="373" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Mute"/>
+                                        <connections>
+                                            <action selector="onMute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBF-4V-1nF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-6b-vMn">
+                                        <rect key="frame" x="0.0" y="160" width="373" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Disconnect"/>
+                                        <connections>
+                                            <action selector="onDisconnectAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Av-DJ-5z4"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-AN-DbR">
+                                        <rect key="frame" x="0.0" y="213.33333333333331" width="373" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVG-cH-oWj">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Previuos"/>
+                                                <connections>
+                                                    <action selector="onPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b83-6s-y5W"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agR-Me-I2X">
+                                                <rect key="frame" x="203.66666666666663" y="0.0" width="169.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                                <connections>
+                                                    <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIK-gc-kf5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Q5c-wo-YaA">
+                                        <rect key="frame" x="0.0" y="266.66666666666669" width="373" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHu-CO-Guh">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-IW-zbo">
+                                                <rect key="frame" x="74" y="0.0" width="301" height="31"/>
+                                                <connections>
+                                                    <action selector="onVolumeLevel:" destination="BYZ-38-t0r" eventType="valueChanged" id="eRL-xK-Qfd"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xSm-97-5Iz">
+                                        <rect key="frame" x="0.0" y="315.66666666666669" width="373" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text=" Seek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-4M-eEi">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oSK-g5-ltp">
+                                                <rect key="frame" x="74" y="0.0" width="301" height="31"/>
+                                                <connections>
+                                                    <action selector="onSeekTo:" destination="BYZ-38-t0r" eventType="valueChanged" id="PDI-ok-nYI"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oSK-g5-ltp" firstAttribute="width" secondItem="yhj-IW-zbo" secondAttribute="width" id="grz-98-9fT"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-ut-WzB">
+                                <rect key="frame" x="10" y="432" width="64" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="onClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gB-di-lXZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y56-s7-C15" secondAttribute="bottom" id="1wV-d1-iUD"/>
+                            <constraint firstItem="cHO-ut-WzB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8wW-NZ-Um2"/>
+                            <constraint firstItem="oyv-C3-vlb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FQE-Nu-FlG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y56-s7-C15" secondAttribute="trailing" id="VwB-k9-FJT"/>
+                            <constraint firstItem="y56-s7-C15" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" priority="750" constant="1" id="ZeE-Qi-Osq"/>
+                            <constraint firstItem="y56-s7-C15" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oyv-C3-vlb" secondAttribute="bottom" id="ZqH-Ah-hdg"/>
+                            <constraint firstItem="y56-s7-C15" firstAttribute="top" secondItem="cHO-ut-WzB" secondAttribute="bottom" constant="10" id="beq-5N-pQt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oyv-C3-vlb" secondAttribute="trailing" constant="10" id="hEC-RM-tDP"/>
+                            <constraint firstItem="y56-s7-C15" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jSQ-qW-9FR"/>
+                            <constraint firstItem="oyv-C3-vlb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t7x-no-aRn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMute" destination="QB6-ib-XZW" id="TML-Z7-Bky"/>
+                        <outlet property="btnPause" destination="UMJ-BL-cVk" id="taE-wr-l9t"/>
+                        <outlet property="seekSlider" destination="oSK-g5-ltp" id="1Ea-3A-PZf"/>
+                        <outlet property="txtLogView" destination="y56-s7-C15" id="HSo-bS-Bug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.2900763358778624" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+</document>
