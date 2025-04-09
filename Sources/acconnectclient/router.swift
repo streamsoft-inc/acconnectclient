@@ -77,13 +77,19 @@ public struct ConnectReceive : Codable
                 """
     }
 }
+public enum DeviceType : String, Codable
+{
+    case speaker
+    case soundbar
+    case other
+}
 public struct CapabilitiesReceive : Codable
 {
     public let volume: Bool
     public let video: Bool
     public let stream: [String]
     public let format: [String]?
-    public let device: [String]?
+    public let device: DeviceType?
     public let channel: [String]?
     
     public var description: String {
@@ -92,7 +98,7 @@ public struct CapabilitiesReceive : Codable
                 Video:\(video)
                 Stream:\(stream.map{$0}.joined(separator:","))
                 Format:\(format?.map{$0}.joined(separator:",") ?? "--")
-                Device:\(device?.map{$0}.joined(separator:",") ?? "--")
+                Device:\(device?.rawValue ?? "--")
                 Channel:\(channel?.map{$0}.joined(separator:",") ?? "--")
                 """
     }

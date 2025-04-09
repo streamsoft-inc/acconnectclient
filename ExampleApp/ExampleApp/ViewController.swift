@@ -213,7 +213,7 @@ class ViewController: UIViewController {
                 // nothing
             }
         }
-       
+        stopPollingStatus()
         self.activeDevice = nil
     }
 
@@ -270,7 +270,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ACConnectClientDelegate {
     func deviceFound(_ device: ACDevice) {
-        appendLineTime("🎯 Device found: \(device.modelName) @ \(device.ip)")
+        appendLineTime("🎯 Device found: \(device.modelName) @ \(device.ip) with path \(device.path)" )
         discoveredDevices.append(device)
         
         NetworkServices.network.connect(device: device) { responce1 in

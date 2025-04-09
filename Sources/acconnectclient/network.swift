@@ -139,11 +139,12 @@ extension NetworkServices
                     return
                 }
                 
+                var str = String(data: data, encoding: .utf8) ?? "NA"
                 do {
                     let decoded = try JSONDecoder().decode(T.self, from: data)
                     onComplete(.success(decoded))
                 } catch {
-                    onComplete(.failure( ACConnectError(error: "Decoding error: \(error.localizedDescription)", code: statusCode)))
+                    onComplete(.failure( ACConnectError(error: "Decoding error: \(error.localizedDescription) \n \(str)", code: statusCode)))
                 }
             }.resume()
         }
